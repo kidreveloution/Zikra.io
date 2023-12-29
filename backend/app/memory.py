@@ -28,7 +28,8 @@ def getAllMemoriesTimed(timestamp):
     for key in redis_connection.scan_iter("*"):
         try:
             individual=redisLoad(key)
-            individual.append(key)
+            print(individual)
+            print(type(individual))
             ind_timestamp = individual['timestamp']
             memDate = datetime.strptime(ind_timestamp,"%Y-%m-%d")
             if (memDate == timestamp):
@@ -38,6 +39,7 @@ def getAllMemoriesTimed(timestamp):
     return res
     
 def redisLoad(id):
+
     memory_data = redis_connection.get(id)  
     if memory_data:
         memory_dict = json.loads(memory_data)
