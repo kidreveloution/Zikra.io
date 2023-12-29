@@ -37,7 +37,6 @@ function activateMapClick() {
                 if (address) {
                     var inputField = document.getElementById('location');
                     inputField.innerHTML = address;
-                    console.log(address);
                 }
             });
         });
@@ -57,7 +56,7 @@ function getAddress(lat, long, callback) {
                 locationName = locationName.substring(locationName.indexOf(" ") + 1);
                 callback(locationName);
             } else {
-                console.log("No Location Found");
+                console.log("No Location Found, get Address Failed");
             }
         }
     });

@@ -20,8 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('addMemoryForm').addEventListener('submit', function(event) {
         // Prevent the default form submission behavior
         event.preventDefault();
-        console.log('Form submitted!'); 
-        console.log()
   
         var memory ={
             "title": String(document.getElementById('title').value),
@@ -40,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contentType: "application/json",
             success: function (data) {
                 console.log("Memory Added")
+                location.reload();
                 //document.getElementById("addMemoryForm").reset();
             }
         })

@@ -33,8 +33,6 @@ function showAllMemories(timestamp){
         data: dataStruct,
         success: function (res) {
             _populateMemories(res)
-            console.log("GOOD MEMORY PULL")
-            console.log(res)
         }
     })
 }
