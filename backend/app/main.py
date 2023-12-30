@@ -46,7 +46,9 @@ def read_item(
         link=item.link,
         icon=item.icon
         )
-    print(videoMemory)
+    print(videoMemory.title)
+    print(videoMemory.location)
+
     redisSave(videoMemory)
     return {"message": f"Successfully Added {videoMemory.title}"}
 
