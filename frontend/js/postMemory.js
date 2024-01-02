@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "lon": String(newMarkerLong),
             "link": String(document.getElementById('link').value),
             "icon":String(document.getElementById('eventCategory').value),
+            "descx":String(document.getElementById('descx').value),
         }
         console.log(document.getElementById('timestamp').value)
         $.ajax({
