@@ -56,7 +56,7 @@ function getAddress(lat, long, callback) {
                 locationName = locationName.substring(locationName.indexOf(" ") + 1);
                 callback(locationName);
             } else {
-                console.log("No Location Found, get Address Failed");
+                console.log("No Location Found");
             }
         }
     });
